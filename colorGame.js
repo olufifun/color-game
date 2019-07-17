@@ -10,6 +10,7 @@ var colors = [
 var squares = document.querySelectorAll(".square");
 var pickedColor = colors[Math.floor(Math.random() * 6)];
 var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message")
 
 colorDisplay.textContent = pickedColor;
 
@@ -28,6 +29,7 @@ for (var i = 0; i < squares.length; i++) {
             alert ("Correct!");
         } else {
            this.style.background = "#232323";
+           messageDisplay.textContent = "Try Again";
         }
     });
 }
