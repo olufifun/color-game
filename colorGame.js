@@ -19,6 +19,7 @@ for (var i = 0; i < squares.length; i++) {
 
     //add click listeners to squares
     squares[i].addEventListener("click", function() {
-    
+    // grab color of clicked square
+    var clickedColor = this.style.backgroundColor;
     });
 }
