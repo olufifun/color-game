@@ -27,12 +27,7 @@ function init() {
             } else {
                 numSquares = 9;
             }
-
             reset();
-            // figure out how many squares to show
-            // pick new colors
-            // pick a new pickedColor
-            // update page to reflect changes
         });
     }
 
@@ -81,57 +76,6 @@ function reset() {
     h1.style.background = "steelblue";
 }
 
-
-// easyButton.addEventListener("click", function(){
-//     easyButton.classList.add("selected");
-//     mediumButton.classList.remove("selected");
-//     hardButton.classList.remove("selected");
-//     numSquares = 3;
-//     colors = generateRandomColors(numSquares);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor
-//     for (var i = 0; i < squares.length; i++) {
-//         if (colors[i]) {
-//             squares[i].style.background = colors[i];
-//         }else {
-//             squares[i].style.display = "none";
-//         }
-//         }
-//     h1.style.background = "#232323";
-// });
-
-// mediumButton.addEventListener("click", function(){
-//     easyButton.classList.remove("selected");
-//     mediumButton.classList.add("selected");
-//     hardButton.classList.remove("selected");
-//     numSquares = 6;
-//     colors = generateRandomColors(numSquares);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor
-//     for (var i = 0; i < squares.length; i++) {
-//         if (colors[i]) {
-//             squares[i].style.background = colors[i];
-//         }else {
-//             squares[i].style.display = "none";
-//         }
-//         }
-//     h1.style.background = "#232323";
-// });
-
-// hardButton.addEventListener("click", function(){
-//     easyButton.classList.remove("selected");
-//     mediumButton.classList.remove("selected");
-//     hardButton.classList.add("selected");
-//     numSquares = 9;
-//     colors = generateRandomColors(numSquares);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor
-//     for (var i = 0; i < squares.length; i++) {
-//             squares[i].style.background = colors[i];
-//             squares[i].style.display = "block";
-//         }
-//     h1.style.background = "#232323";
-// });
 
 resetButton.addEventListener("click", function(){
     reset();
