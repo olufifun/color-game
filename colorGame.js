@@ -19,6 +19,7 @@ for (var i = 0; i < squares.length; i++) {
         var clickedColor = this.style.background;
 
         //compare clickedColor to pickedColor
+        // console.log(clickedColor, pickedColor);
         if (clickedColor === pickedColor){
             messageDisplay.textContent = "Correct!";
             changeColors(clickedColor);
@@ -48,8 +49,8 @@ function generateRandomColors(num) {
     var arr = [];
     //repeat num times
     for (var i = 0; i < num; i++) {
-        arr.push(randomColor());
-        //get random color and push into arr       
+        //get random color and push into arr   
+        arr.push(randomColor());       
     }
     //return array
     return arr;
