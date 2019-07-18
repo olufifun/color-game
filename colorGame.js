@@ -47,6 +47,13 @@ hardButton.addEventListener("click", function(){
     easyButton.classList.remove("selected");
     mediumButton.classList.remove("selected");
     hardButton.classList.add("selected");
+    colors = generateRandomColors(9);
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor
+    for (var i = 0; i < squares.length; i++) {
+            squares[i].style.background = colors[i];
+            squares[i].style.display = "block";
+        }
 });
 
 resetButton.addEventListener("click", function(){
