@@ -14,7 +14,12 @@ init();
 
 function init() {
     //mode buttons event listeners
-    for (var i = 0; i < modeButtons.length; i++) {
+    setupModeButtons();
+    setupSquares();
+}
+
+function setupModeButtons() {
+        for (var i = 0; i < modeButtons.length; i++) {
         modeButtons[i].addEventListener("click", function(){
             modeButtons[0].classList.remove("selected");
             modeButtons[1].classList.remove("selected");
@@ -30,15 +35,14 @@ function init() {
             reset();
         });
     }
+}
 
+function setupSquares () {
     for (var i = 0; i < squares.length; i++) {
         squares[i].addEventListener("click", function() {
-    
             // grab color of clicked square
             var clickedColor = this.style.background;
-    
             //compare clickedColor to pickedColor
-            // console.log(clickedColor, pickedColor);
             if (clickedColor === pickedColor){
                 messageDisplay.textContent = "Correct!";
                 resetButton.textContent = "Play Again?";
@@ -52,8 +56,6 @@ function init() {
     }
     reset();
 }
-
-
 
 function reset() {
         //generate all new colors
