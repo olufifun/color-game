@@ -1,5 +1,6 @@
-var colors = generateRandomColors(9);
 
+var numSquares = 9
+var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor(); 
 var colorDisplay = document.getElementById("colorDisplay");
@@ -14,7 +15,8 @@ easyButton.addEventListener("click", function(){
     easyButton.classList.add("selected");
     mediumButton.classList.remove("selected");
     hardButton.classList.remove("selected");
-    colors = generateRandomColors(3);
+    numSquares = 3;
+    colors = generateRandomColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor
     for (var i = 0; i < squares.length; i++) {
@@ -31,7 +33,8 @@ mediumButton.addEventListener("click", function(){
     easyButton.classList.remove("selected");
     mediumButton.classList.add("selected");
     hardButton.classList.remove("selected");
-    colors = generateRandomColors(6);
+    numSquares = 6;
+    colors = generateRandomColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor
     for (var i = 0; i < squares.length; i++) {
@@ -41,24 +44,27 @@ mediumButton.addEventListener("click", function(){
             squares[i].style.display = "none";
         }
         }
+    h1.style.background = "#232323";
 });
 
 hardButton.addEventListener("click", function(){
     easyButton.classList.remove("selected");
     mediumButton.classList.remove("selected");
     hardButton.classList.add("selected");
-    colors = generateRandomColors(9);
+    numSquares = 9;
+    colors = generateRandomColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor
     for (var i = 0; i < squares.length; i++) {
             squares[i].style.background = colors[i];
             squares[i].style.display = "block";
         }
+    h1.style.background = "#232323";
 });
 
 resetButton.addEventListener("click", function(){
     //generate all new colors
-    colors = generateRandomColors(9);
+    colors = generateRandomColors(numSquares);
     //pick a new random color from array
     pickedColor = pickColor();
     //change colorDispplay to match pickedColor
