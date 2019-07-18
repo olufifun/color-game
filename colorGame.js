@@ -1,5 +1,5 @@
 
-var numSquares = 9
+var numSquares = 9;
 var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor(); 
@@ -68,7 +68,10 @@ resetButton.addEventListener("click", function(){
     //pick a new random color from array
     pickedColor = pickColor();
     //change colorDispplay to match pickedColor
-    colorDisplay.textContent = pickedColor
+    colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors"
+
+    messageDisplay.textContent = "";
     //change colors of squares
     for (var i = 0; i < squares.length; i++) {
     squares[i].style.background = colors[i];
