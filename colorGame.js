@@ -8,7 +8,7 @@ var colors = [
 ]
 // Math.floor(Math.random() * 6)
 var squares = document.querySelectorAll(".square");
-var pickedColor = pickColor();
+var pickedColor = pickColor(); 
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message")
 
