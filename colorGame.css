@@ -5,10 +5,10 @@ body {
 }
 
 .square {
-    width: 30%;
+    width: 25%;
     background: purple;
     background-color: purple;
-    padding-bottom: 30%;
+    padding-bottom: 25%;
     float: left;
     margin: 1.66%;
     border-radius: 20%;
